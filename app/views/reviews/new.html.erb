@@ -1,0 +1,15 @@
+<div class="wrapper">
+	<div class="container">
+		<div class="row">
+			<div class="col-xs-12 col-sm-6 offset-sm-3">
+				<%= link_to "<< Back to restaurant", restaurant_path(@restaurant) %>
+				<h1>Add a Review</h1>
+				<%= simple_form_for [@restaurant, @review] do |f| %>
+				  <%= f.input :content %>
+				  <%= f.input :rating %>
+				  <%= f.submit "Add a review", class: "btn btn-primary" %>
+				<% end %>
+			</div>
+		</div>
+	</div>
+</div>
